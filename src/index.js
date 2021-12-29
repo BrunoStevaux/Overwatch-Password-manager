@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
-require("./main/Listener");
+// require("./main/Listener");
 require("./components/Database");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
