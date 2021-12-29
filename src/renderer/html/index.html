@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../../plugins/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+
+    <form id="accountAdd">
+      <label for="emailAdd"></label>
+      <input type="email" id="emailAdd" placeholder="example@example.com" required>
+      <label for="passwordAdd"></label>
+      <input type="password" id="passwordAdd" placeholder="password123" required>
+      <label for="battleTagAdd"></label>
+      <input type="text" id="battleTagAdd" placeholder="tag#0000" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <p>Current Accounts:</p>
+    <table id="accounts">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Battle Tag</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="../js/homeRenderer.js"></script>
+
+  </body>
+
+</html>

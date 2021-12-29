@@ -1,21 +1,27 @@
 {
   "name": "owpm",
   "productName": "owpm",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
+    "start": "electron src/index.js",
+    "rebuild": "electron-rebuild -f -w better-sqlite3",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "publish": "electron-forge publish"
   },
   "keywords": [],
   "author": {
     "name": "BrunoStevaux",
     "email": "144894s@acadiau.ca"
   },
+  "contributors": [
+    {
+      "name": "Youssof Abaza",
+      "email": "youssof@dal.ca"
+    }
+  ],
   "license": "MIT",
   "config": {
     "forge": {
@@ -45,14 +51,17 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "better-sqlite3": "^7.4.5",
+    "electron-squirrel-startup": "^1.0.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.61",
     "@electron-forge/maker-deb": "^6.0.0-beta.61",
     "@electron-forge/maker-rpm": "^6.0.0-beta.61",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
     "@electron-forge/maker-zip": "^6.0.0-beta.61",
-    "electron": "16.0.4"
+    "electron": "^16.0.5",
+    "electron-rebuild": "^3.2.5",
+    "prettier": "2.5.1"
   }
 }
