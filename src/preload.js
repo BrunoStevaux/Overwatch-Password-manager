@@ -1,5 +1,7 @@
 const { ipcRenderer, contextBridge } = require("electron");
-// placeholder for now
+
 contextBridge.exposeInMainWorld("api", {
-  sendMsg: (msg) => ipcRenderer.send("message", msg),
+  sendAccountDetails: (account) => ipcRenderer.invoke("addAccountDetails", account),
+  getAccounts: () => ipcRenderer.invoke("getAccountDetails"),
+  deleteAllAccounts: () => ipcRenderer.send("deleteAccounts"),
 });
