@@ -9,18 +9,33 @@
   </head>
 
   <body>
-
     <form id="accountAdd">
-      <label for="emailAdd"></label>
-      <input type="email" id="emailAdd" placeholder="example@example.com" required>
-      <label for="passwordAdd"></label>
-      <input type="password" id="passwordAdd" placeholder="password123" required>
-      <label for="battleTagAdd"></label>
-      <input type="text" id="battleTagAdd" placeholder="tag#0000" required>
-      <button type="submit">Add</button>
+      <div>
+        <label for="emailAdd">Email:</label>
+        <input type="text" id="emailAdd" placeholder="example@example.com" value="test@test.com">
+        <span class="error" id="emailError" aria-live="polite"></span>
+      </div>
+      <div>
+        <label for="passwordAdd">Password:</label>
+        <input type="password" id="passwordAdd" placeholder="password123" value="1234">
+        <span class="error" id="passwordError" aria-live="polite"></span>
+      </div>
+      <div>
+        <label for="battleTagAdd">Battle Tag:</label>
+        <input type="text" id="battleTagAdd" placeholder="tag#0000" value="test#0001">
+        <span class="error" id="battleTagError" aria-live="polite"></span>
+      </div>
+
+      <div>
+        <span class="success" id="accountAddStatus" aria-live="polite"></span>
+      </div>
+
+      <button class="btnAdd" type="submit">Add Account</button>
+      <button class="btnRemove" type="button">Remove All</button>
+
     </form>
 
-    <p>Current Accounts:</p>
+    <h4>Current Accounts:</h4>
     <table id="accounts">
       <thead>
         <tr>
